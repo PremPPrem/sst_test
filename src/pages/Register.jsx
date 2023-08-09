@@ -11,7 +11,6 @@ function Register() {
   const [lastName, setLastName] = useState("");
   const [lastNameError, setLastNameError] = useState("");
   const [ref, setRef] = useState(params.get('ref'));
-  // const [refError, setRefError] = useState("");
   const [email, setEmail] = useState(params.get('email'));
   const [emailError, setEmailError] = useState("");
   const [phone, setPhone] = useState("");
@@ -25,29 +24,9 @@ function Register() {
   const validPhone = 
     /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
-  // const handleChangeRef = (e) => {
-  //   setRef(e.target.value)
-    
-  //   setSearchParams({
-  //     ref: ref,
-  
-  //   })
-  // };
-
-
-  // // const handleChangeEmail = (e) => {
-  // //   setEmail(e.target.value)
-
-  // //   setSearchParams({email: e.target.value})
-  // // };
 
   const buttonCheck = (  !email || !firstName || !lastName || !phone) 
-  //   if() {
-  //     !email && !firstName && !lastName && !phone
-  //   } 
-      
-    
-  // }
+
     
 
   const handleSubmit = (e) => {
