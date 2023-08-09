@@ -1,0 +1,11 @@
+.home {
+    min-height: 100vh;
+
+    .home_content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+}

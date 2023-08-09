@@ -1,0 +1,114 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: rgba($color: #007bff, $alpha: 0.9);
+  color: #fff;
+  height: 80px;
+  margin: auto 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 800;
+
+  .nav_left {
+    padding: 0 30px;
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+  }
+
+  .nav_right {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav_list {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      li {
+        position: relative;
+        a {
+          text-decoration: none;
+          color: rgba($color: #fff, $alpha: 0.7);
+          padding: 0 1rem;
+          font-weight: 700;
+          font-size: 1.5rem;
+
+          &.active {
+            color: #fff;
+          }
+
+          .nav_list_icon {
+            margin-right: 0.4rem;
+            padding-top: 0.2rem;
+          }
+        }
+      }
+    }
+
+    .nav_icon {
+        font-size: 2rem;
+        display: none;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+    .nav {
+        .nav_right {
+            .nav_list {
+
+                &.nav_list_toggle {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    top: 100%;
+                    left: 0;
+                    background: #007bff;
+                    width: 100%;
+                    border-top: 4px solid rgba($color: #fff, $alpha: 0.4);
+
+                    li {
+                        margin: 1.5rem 0;
+                    }
+                }
+
+            }
+
+            .nav_list {
+                display: none;
+            }
+
+            .nav_icon {
+                display: block;
+                margin-top: 0.8rem;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 380px) {
+    .nav {
+        .nav_left {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .nav_right {
+            .nav_icon {
+                font-size: 1.5rem;
+                margin-top: 0.6rem;
+            }
+        }
+    }
+}

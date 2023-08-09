@@ -1,0 +1,44 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+
+
+  .loader {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to top, #001d30 40%, #51eeee);
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #fff;
+      inset: 20px 20px 0 0;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #001d30;
+      box-shadow: 0 0 5px #51eeee, 0 0 25px #51eeee, 0 0 50px #51eeee,
+        0 0 75px #51eeee;
+    }
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+    // filter: hue-rotate(360deg);
+  }
+}
